@@ -18,7 +18,7 @@ Helmets Pro es útil para los amantes de las motocicletas, ciclistas y cualquier
 
 Los usuarios pueden comenzar con Helmets Pro siguiendo estos pasos:
 
-1. Clonar o descargar el repositorio desde [enlace al repositorio](https://github.com/jhans11/SitioWeb).
+1. Clonar o descargar el repositorio desde (https://github.com/jhans11/helmetsPro).
 2. Configurar el entorno de desarrollo web (servidor PHP, MySQL).
 3. Importar la base de datos proporcionada en el archivo `database.sql`.
 4. Actualizar la configuración de conexión a la base de datos en el archivo `config.php`.
@@ -28,9 +28,8 @@ Los usuarios pueden comenzar con Helmets Pro siguiendo estos pasos:
 
 Los usuarios pueden recibir ayuda o informar problemas a través de los siguientes canales:
 
-- Documentación: Consulta la documentación en [enlace a la documentación](https://github.com/jhans11/SitioWeb) para obtener información detallada sobre cómo utilizar la tienda y configurar el entorno.
-- Seguimiento de Problemas: Si encuentras algún problema o tienes una sugerencia, por favor, crea un problema en el [issue tracker del repositorio](https://github.com/jhans11/SitioWeb).
-- Comunidad: Únete a nuestra comunidad en [enlace al foro o grupo de discusión](https://github.com/jhans11/SitioWeb) para hacer preguntas y obtener ayuda de otros usuarios y desarrolladores.
+- Documentación: Consulta la documentación en (https://github.com/helmestPro) para obtener información detallada sobre cómo utilizar la tienda y configurar el entorno.
+
 
 ## Quién mantiene y contribuye con el proyecto
 
