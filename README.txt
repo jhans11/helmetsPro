@@ -1,38 +1,31 @@
-# Helmets Pro
+# 🪖 Helmets Pro
 
-## Qué hace el proyecto
+## 🧠 Acerca de
+Tienda virtual de cascos desarrollada con PHP, Bootstrap y MySQL. Incluye catálogo, carrito de compras, autenticación y panel de administración.
 
-Helmets Pro es una Tienda Virtual que se especializa en la venta de cascos. Este proyecto está desarrollado utilizando PHP, Bootstrap y MySQL como base de datos. Las características principales de Helmets Pro incluyen:
+---
 
-- Catálogo de cascos: Los usuarios pueden explorar una amplia gama de cascos para diferentes actividades y estilos.
-- Carrito de compras: Los usuarios pueden agregar cascos a su carrito de compras y realizar compras seguras.
-- Gestión de pedidos: Los usuarios pueden ver el estado de sus pedidos y realizar un seguimiento de las entregas.
-- Autenticación de usuarios: Los clientes pueden registrarse, iniciar sesión y gestionar sus cuentas.
-- Administración de productos: Los administradores pueden agregar, editar y eliminar productos desde el panel de administración.
+## 🚀 ¿Qué hace el proyecto?
 
-## Por qué el proyecto es útil
+**Helmets Pro** es una tienda online especializada en la venta de cascos para motociclistas, ciclistas y otros usuarios. Ofrece una experiencia completa de compra con funcionalidades como:
 
-Helmets Pro es útil para los amantes de las motocicletas, ciclistas y cualquier persona que necesite un casco de alta calidad. Proporciona una plataforma conveniente para comprar cascos de forma segura y acceder a una amplia variedad de productos.
+- 🛒 **Catálogo de productos** con filtros visuales.
+- 🧾 **Carrito de compras** y sistema de pedidos.
+- 👤 **Registro e inicio de sesión de usuarios.**
+- ⚙️ **Gestión de productos** para administradores.
+- 📦 **Seguimiento de pedidos.**
 
-## Cómo pueden comenzar los usuarios con el proyecto
+---
 
-Los usuarios pueden comenzar con Helmets Pro siguiendo estos pasos:
+## 📌 ¿Por qué es útil?
 
-1. Clonar o descargar el repositorio desde (https://github.com/jhans11/helmetsPro).
-2. Configurar el entorno de desarrollo web (servidor PHP, MySQL).
-3. Importar la base de datos proporcionada en el archivo `database.sql`.
-4. Actualizar la configuración de conexión a la base de datos en el archivo `config.php`.
-5. Ejecutar la aplicación y explorar el catálogo de cascos.
+Helmets Pro centraliza la compra de cascos en un solo lugar, brindando una plataforma confiable, visual y fácil de usar para usuarios y administradores.
 
-## Dónde pueden recibir ayuda los usuarios con tu proyecto
+---
 
-Los usuarios pueden recibir ayuda o informar problemas a través de los siguientes canales:
+## ⚙️ ¿Cómo empezar?
 
-- Documentación: Consulta la documentación en (https://github.com/helmestPro) para obtener información detallada sobre cómo utilizar la tienda y configurar el entorno.
+1. Clona el repositorio:
 
-
-## Quién mantiene y contribuye con el proyecto
-
-El proyecto Helmets Pro es mantenido por el equipo de desarrollo de [Politecnico de Medellin]. Si estás interesado en contribuir al proyecto, ¡estamos abiertos a colaboraciones! Consulta el archivo [Contributing.md](Contributing.md) para obtener más información sobre cómo contribuir al proyecto.
-
-¡Gracias por elegir Helmets Pro como tu tienda virtual de cascos! Esperamos que disfrutes de la experiencia de compra.
+```bash
+git clone https://github.com/jhans11/helmetsPro.git
