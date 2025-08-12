@@ -61,3 +61,12 @@
 [2025-08-10 21:54:27] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
 [2025-08-11 14:00:58] CONNECTION: Conexión establecida | Params: []
 [2025-08-11 17:05:38] CONNECTION: Conexión establecida | Params: []
+[2025-08-12 14:49:28] CONNECTION: Conexión establecida | Params: []
+[2025-08-12 14:49:29] CONNECTION: Conexión establecida | Params: []
+[12-Aug-2025 14:49:29 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-12 14:49:29] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-12 14:49:29] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[12-Aug-2025 14:53:04 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
