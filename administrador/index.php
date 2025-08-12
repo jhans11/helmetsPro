@@ -1,19 +1,57 @@
 <?php
+// Incluir clases de seguridad
+require_once 'config/DB.php';
+require_once 'config/Auth.php';
+require_once 'config/Validator.php';
+require_once 'config/Middleware.php';
+
+// Configurar sesión segura
+Middleware::configureSecureSession();
 session_start();
-if($_POST){
-    if(($_POST['usuario']=="jhans")&&($_POST['contraseña']=="sistema")){
 
-      $_SESSION['usuario']="ok";
-      $_SESSION['nombreUsuario']="jhans";
-      header('location:inicio.php');
-    }else{
-        $mensaje="Error: el usuario o la contraseña son incorrectos";
+// Verificar si ya está autenticado
+Middleware::requireGuest();
 
+$mensaje = '';
+$auth = new Auth();
+
+if ($_POST) {
+    // Validar token CSRF
+    Middleware::validateCSRF();
+    
+    // Sanitizar entradas
+    $usuario = Validator::sanitizeText('usuario');
+    $password = $_POST['contraseña'] ?? '';
+    
+    // Validar datos requeridos
+    $required_fields = ['usuario', 'contraseña'];
+    $errors = Validator::validateRequired($_POST, $required_fields);
+    
+    if (empty($errors)) {
+        // Verificar rate limiting
+        $ip = $_SERVER['REMOTE_ADDR'];
+        Middleware::checkRateLimit($ip);
+        
+        // Intentar login
+        $user = $auth->login($usuario, $password);
+        
+        if ($user) {
+            // Login exitoso
+            $auth->crearSesion($user);
+            header('Location: inicio.php');
+            exit();
+        } else {
+            // Login fallido
+            Middleware::logFailedAttempt($ip, $usuario);
+            $mensaje = "Error: Usuario o contraseña incorrectos";
+        }
+    } else {
+        $mensaje = implode('<br>', $errors);
     }
-
 }
 
-
+// Configurar headers de seguridad
+Middleware::setSecurityHeaders();
 ?>
 <!doctype html>
 <html lang="en">
@@ -49,18 +87,19 @@ if($_POST){
                 </div>
                 <?php }?>
                     <form method="POST">
+                        <!-- Token CSRF -->
+                        <input type="hidden" name="csrf_token" value="<?php echo Validator::getCSRFToken(); ?>">
 
-                    <div class = "form-group">
-                    <label >Usuario</label>
-                    <input type="text" class="form-control" name="usuario" placeholder="Escribe tu usuario">
-                    </div>
-                    
-                    <div class="form-group">  
-                    <label >Contraseña:</label>                  
-                    <input type="password" class="form-control" name="contraseña" placeholder="Escribe tu contraseña">
-                    </div>
-                   <button type="submit" class="btn btn-primary">Entrar al administrador</button>
-                
+                        <div class="form-group">
+                            <label>Usuario</label>
+                            <input type="text" class="form-control" name="usuario" placeholder="Escribe tu usuario" required>
+                        </div>
+                        
+                        <div class="form-group">  
+                            <label>Contraseña:</label>                  
+                            <input type="password" class="form-control" name="contraseña" placeholder="Escribe tu contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar al administrador</button>
                     </form>
                     
                     

@@ -1,15 +1,10 @@
 <?php
-$host="localhost";
-$bd="sitio";
-$usuario="root";
-$contraseña="";
+require_once __DIR__ . '/DB.php';
 
 try {
-    $conexion=new PDO("mysql:host=$host;dbname=$bd",$usuario,$contraseña);
-    
-
-} catch ( Exception $ex) {
-   
-    echo $ex->getMessage();
+    $db = DB::getInstance();
+    $conexion = $db->getConnection();
+} catch (Exception $e) {
+    die("Error de conexión a la base de datos: " . $e->getMessage());
 }
-?>      
+?>

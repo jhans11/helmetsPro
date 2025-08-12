@@ -1,0 +1,63 @@
+[2025-08-06 20:32:39] CONNECTION: Conexión establecida | Params: []
+[2025-08-06 20:45:52] CONNECTION: Conexión establecida | Params: []
+[2025-08-06 20:45:54] CONNECTION: Conexión establecida | Params: []
+[06-Aug-2025 20:45:54 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-06 20:45:54] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-06 20:45:54] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[06-Aug-2025 20:45:54 America/Mexico_City] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\sitioweb\administrador\template\cabecera.php on line 2
+[2025-08-07 09:47:19] CONNECTION: Conexión establecida | Params: []
+[2025-08-07 09:47:21] CONNECTION: Conexión establecida | Params: []
+[07-Aug-2025 09:47:21 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-07 09:47:21] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-07 09:47:22] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[07-Aug-2025 09:47:22 America/Mexico_City] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\sitioweb\administrador\template\cabecera.php on line 2
+[2025-08-07 14:58:15] CONNECTION: Conexión establecida | Params: []
+[2025-08-07 14:58:17] CONNECTION: Conexión establecida | Params: []
+[07-Aug-2025 14:58:17 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-07 14:58:17] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-07 14:58:17] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-08 15:04:52] CONNECTION: Conexión establecida | Params: []
+[2025-08-08 15:05:03] CONNECTION: Conexión establecida | Params: []
+[2025-08-08 15:05:04] CONNECTION: Conexión establecida | Params: []
+[08-Aug-2025 15:05:04 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-08 15:05:04] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-08 15:05:05] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-08 15:05:09] CONNECTION: Conexión establecida | Params: []
+[2025-08-08 15:05:10] CONNECTION: Conexión establecida | Params: []
+[08-Aug-2025 15:05:10 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-08 15:05:10] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-08 15:05:10] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-08 19:00:38] CONNECTION: Conexión establecida | Params: []
+[2025-08-08 19:00:41] CONNECTION: Conexión establecida | Params: []
+[08-Aug-2025 19:00:41 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-08 19:00:41] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-08 19:00:41] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-09 22:50:35] CONNECTION: Conexión establecida | Params: []
+[2025-08-09 22:50:37] CONNECTION: Conexión establecida | Params: []
+[09-Aug-2025 22:50:37 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-09 22:50:37] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-09 22:50:37] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-10 19:00:46] CONNECTION: Conexión establecida | Params: []
+[2025-08-10 19:00:49] CONNECTION: Conexión establecida | Params: []
+[10-Aug-2025 19:00:49 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-10 19:00:49] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-10 19:00:50] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-10 19:01:03] CONNECTION: Conexión establecida | Params: []
+[2025-08-10 19:01:05] CONNECTION: Conexión establecida | Params: []
+[10-Aug-2025 19:01:05 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-10 19:01:05] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-10 19:01:06] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-10 20:58:56] CONNECTION: Conexión establecida | Params: []
+[2025-08-10 21:05:38] CONNECTION: Conexión establecida | Params: []
+[2025-08-10 21:05:39] CONNECTION: Conexión establecida | Params: []
+[10-Aug-2025 21:05:39 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-10 21:05:39] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-10 21:05:40] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-10 21:37:21] CONNECTION: Conexión establecida | Params: []
+[2025-08-10 21:54:26] CONNECTION: Conexión establecida | Params: []
+[2025-08-10 21:54:27] CONNECTION: Conexión establecida | Params: []
+[10-Aug-2025 21:54:27 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-10 21:54:27] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-10 21:54:27] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-11 14:00:58] CONNECTION: Conexión establecida | Params: []
+[2025-08-11 17:05:38] CONNECTION: Conexión establecida | Params: []
