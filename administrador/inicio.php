@@ -29,7 +29,7 @@ include('template/cabecera.php');
                         <hr class="my-2">
                         <p>Administrador</p>
                         <p class="lead">
-                            <a class="btn btn-primary btn-lg" href="seccion/productos.php" role="button">Administrar Tienda</a>
+                        <a class="btn btn-primary btn-lg" href="seccion/productos_mejorado.php" role="button">Administrar Tienda</a>
                         </p>
                     </div>
 

@@ -70,3 +70,47 @@
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[2025-08-15 20:17:31] CONNECTION: Conexión establecida | Params: []
+[2025-08-15 20:21:32] CONNECTION: Conexión establecida | Params: []
+[2025-08-15 20:21:34] CONNECTION: Conexión establecida | Params: []
+[15-Aug-2025 20:21:34 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-15 20:21:34] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-15 20:21:34] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-15 20:46:52] CONNECTION: Conexión establecida | Params: []
+[2025-08-15 20:46:54] CONNECTION: Conexión establecida | Params: []
+[15-Aug-2025 20:46:54 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-15 20:46:54] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-15 20:46:54] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[15-Aug-2025 20:48:16 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[15-Aug-2025 20:48:27 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[15-Aug-2025 20:48:29 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[15-Aug-2025 21:01:23 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[15-Aug-2025 21:01:23 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[15-Aug-2025 21:01:23 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[15-Aug-2025 21:01:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[2025-08-15 21:01:28] CONNECTION: Conexión establecida | Params: []
+[2025-08-15 21:01:30] CONNECTION: Conexión establecida | Params: []
+[15-Aug-2025 21:01:30 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-15 21:01:30] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-15 21:01:30] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]

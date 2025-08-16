@@ -49,11 +49,7 @@ if (isset($_SESSION['cliente_id'])) {
                             <i class="fas fa-helmet-battle"></i> Cascos
                         </a>
               </li>
-              <li class="nav-item">
-                        <a class="nav-link" href="nosotros.php">
-                            <i class="fas fa-info-circle"></i> Nosotros
-                        </a>
-                    </li>
+              
                 </ul>
                 
                 <!-- ✅ PASO 11: Contador del carrito en la navegación -->
@@ -109,6 +105,12 @@ if (isset($_SESSION['cliente_id'])) {
                             <i class="fas fa-cog"></i> Admin
                         </a>
               </li>
+
+              <li class="nav-item">
+                        <a class="nav-link" href="nosotros.php">
+                            <i class="fas fa-info-circle"></i> Nosotros
+                        </a>
+                    </li>
           </ul>
             </div>
         </div>

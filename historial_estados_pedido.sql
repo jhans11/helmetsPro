@@ -28,3 +28,9 @@ AFTER fecha_pedido;
 -- comentario: Comentario opcional sobre el cambio
 -- fecha_cambio: Fecha y hora del cambio de estado
 -- id_admin: ID del administrador que realizó el cambio (opcional)
+
+
+
+
+
+
