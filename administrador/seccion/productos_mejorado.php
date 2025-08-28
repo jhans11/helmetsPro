@@ -1,4 +1,4 @@
-<?php
+<?php 
 // Incluir clases de seguridad
 require_once '../config/DB.php';
 require_once '../config/Auth.php';
@@ -55,8 +55,8 @@ if ($_POST) {
                 $mensaje = "✅ Producto agregado correctamente";
                 $tipo_mensaje = 'success';
             }
-            break;
-            
+        break;
+
         case 'Modificar':
             $id = (int)$_POST['txtID'];
             $nombre = Validator::sanitizeText($_POST['txtNombre']);
@@ -175,7 +175,7 @@ include('../template/cabecera.php');
                     <button class="btn btn-primary" data-toggle="modal" data-target="#modalProducto">
                         <i class="fas fa-plus"></i> Nuevo Producto
                     </button>
-                </div>
+        </div>
 
                 <!-- Mensajes -->
                 <?php if ($mensaje): ?>
@@ -207,38 +207,38 @@ include('../template/cabecera.php');
                     </div>
                     <div class="col-md-3">
                         <div class="card bg-warning text-white">
-                            <div class="card-body">
+        <div class="card-body">
                                 <h5 class="card-title">Stock Bajo</h5>
                                 <h3><?php echo count(array_filter($productos, function($p) { return $p['stock'] < 5; })); ?></h3>
                             </div>
-                        </div>
-                    </div>
+</div>
+</div>
                     <div class="col-md-3">
                         <div class="card bg-info text-white">
                             <div class="card-body">
                                 <h5 class="card-title">Valor Total</h5>
                                 <h3>$<?php echo number_format(array_sum(array_column($productos, 'precio')), 2); ?></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+</div>
+    </div>
+        </div>
+    </div>
 
                 <!-- Tabla de productos -->
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
+        <thead>
+            <tr>
+                <th>ID</th>
                                 <th>Imagen</th>
-                                <th>Nombre</th>
+                <th>Nombre</th>
                                 <th>Precio</th>
                                 <th>Stock</th>
                                 <th>Categoría</th>
                                 <th>Estado</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
                             <?php foreach ($productos as $producto): ?>
                                 <tr>
                                     <td><?php echo $producto['id']; ?></td>
@@ -266,7 +266,7 @@ include('../template/cabecera.php');
                                         <span class="badge badge-<?php echo $producto['activo'] ? 'success' : 'secondary'; ?>">
                                             <?php echo $producto['activo'] ? 'Activo' : 'Inactivo'; ?>
                                         </span>
-                                    </td>
+            </td>
                                     <td>
                                         <button class="btn btn-sm btn-info" onclick="editarProducto(<?php echo $producto['id']; ?>)">
                                             <i class="fas fa-edit"></i>
@@ -274,11 +274,11 @@ include('../template/cabecera.php');
                                         <button class="btn btn-sm btn-danger" onclick="eliminarProducto(<?php echo $producto['id']; ?>)">
                                             <i class="fas fa-trash"></i>
                                         </button>
-                                    </td>
-                                </tr>
+            </td>
+            </tr>
                             <?php endforeach; ?>
-                        </tbody>
-                    </table>
+        </tbody>
+    </table>
                 </div>
             </main>
         </div>
@@ -335,8 +335,8 @@ include('../template/cabecera.php');
                                     </select>
                                 </div>
                             </div>
-                        </div>
-                        
+</div>
+            
                         <div class="form-group">
                             <label>Descripción</label>
                             <textarea class="form-control" name="txtDescripcion" id="txtDescripcion" rows="3"></textarea>

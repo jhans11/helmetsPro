@@ -7,6 +7,8 @@ require_once 'config/Middleware.php';
 // Verificar autenticación de admin
 Middleware::requireAdmin();
 
+$db = DB::getInstance(); // AGREGAR ESTA LÍNEA
+
 // Configurar paginación
 $por_pagina = 10;
 $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
@@ -26,40 +28,40 @@ if (!empty($filtro_estado)) {
 }
 
 if (!empty($filtro_fecha)) {
-    $where_conditions[] = "DATE(p.fecha_creacion) = ?";
+    $where_conditions[] = "DATE(p.fecha_pedido) = ?";
     $params[] = $filtro_fecha;
 }
 
 $where_clause = !empty($where_conditions) ? 'WHERE ' . implode(' AND ', $where_conditions) : '';
 
-// Obtener total de pedidos para paginación
+// Obtener total de pedidos para paginación (CORREGIDO)
 $sql_count = "SELECT COUNT(*) as total FROM pedidos p 
-              LEFT JOIN usuarios_clientes uc ON p.id_usuario = uc.id 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
               $where_clause";
-$total_pedidos = DB::fetchOne($sql_count, $params)['total'];
+$total_pedidos = $db->fetchOne($sql_count, $params)['total'];
 $total_paginas = ceil($total_pedidos / $por_pagina);
 
-// Obtener pedidos
+// Obtener pedidos (CORREGIDO)
 $sql = "SELECT p.*, uc.nombre, uc.apellido, uc.email 
         FROM pedidos p 
-        LEFT JOIN usuarios_clientes uc ON p.id_usuario = uc.id 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
         $where_clause 
-        ORDER BY p.fecha_creacion DESC 
+        ORDER BY p.fecha_pedido DESC 
         LIMIT ? OFFSET ?";
 
 $params[] = $por_pagina;
 $params[] = $offset;
-$pedidos = DB::fetchAll($sql, $params);
+$pedidos = $db->fetchAll($sql, $params);
 
-// Obtener estadísticas
+// Obtener estadísticas (CORREGIDO)
 $sql_stats = "SELECT 
                 COUNT(*) as total_pedidos,
-                SUM(CASE WHEN estado = 'Pendiente' THEN 1 ELSE 0 END) as pendientes,
-                SUM(CASE WHEN estado = 'Pagado' THEN 1 ELSE 0 END) as pagados,
-                SUM(CASE WHEN estado = 'Enviado' THEN 1 ELSE 0 END) as enviados,
-                SUM(CASE WHEN estado = 'Entregado' THEN 1 ELSE 0 END) as entregados
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
               FROM pedidos";
-$stats = DB::fetchOne($sql_stats);
+$stats = $db->fetchOne($sql_stats);
 ?>
 
 <!DOCTYPE html>

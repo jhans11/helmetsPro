@@ -114,3 +114,389 @@ Stack trace:
 [15-Aug-2025 21:01:30 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
 [2025-08-15 21:01:30] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
 [2025-08-15 21:01:30] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-16 17:20:02] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:20:05] CONNECTION: Conexión establecida | Params: []
+[16-Aug-2025 17:20:05 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-16 17:20:05] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-16 17:20:05] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-16 17:24:15] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:47:52] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:47:55] CONNECTION: Conexión establecida | Params: []
+[16-Aug-2025 17:47:55 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-16 17:47:55] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-16 17:47:55] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-16 17:48:04] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:48:04] QUERY: SELECT COUNT(*) as total FROM cascos | Params: []
+[2025-08-16 17:48:04] QUERY: SELECT COUNT(*) as total FROM pedidos | Params: []
+[2025-08-16 17:48:04] QUERY: SELECT COUNT(*) as total FROM pedidos WHERE estado = 'pendiente' | Params: []
+[2025-08-16 17:48:04] ERROR: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'where clause' | SQL: SELECT SUM(total) as total FROM pedidos WHERE DATE(fecha_creacion) = CURDATE() | Params: []
+[16-Aug-2025 17:48:04 America/Mexico_City] PHP Fatal error:  Uncaught Exception: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'where clause' in C:\xampp\htdocs\sitioweb\administrador\config\DB.php:162
+Stack trace:
+#0 C:\xampp\htdocs\sitioweb\administrador\config\DB.php(170): DB->query('SELECT SUM(tota...', Array)
+#1 C:\xampp\htdocs\sitioweb\administrador\dashboard.php(17): DB->fetchOne('SELECT SUM(tota...')
+#2 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\config\DB.php on line 162
+[16-Aug-2025 17:48:09 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[2025-08-16 17:48:12] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:48:12] ERROR: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.usuario_id' in 'on clause' | SQL: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.usuario_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[16-Aug-2025 17:48:12 America/Mexico_City] PHP Fatal error:  Uncaught Exception: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.usuario_id' in 'on clause' in C:\xampp\htdocs\sitioweb\administrador\config\DB.php:162
+Stack trace:
+#0 C:\xampp\htdocs\sitioweb\administrador\config\DB.php(178): DB->query('\r\n    SELECT uc...', Array)
+#1 C:\xampp\htdocs\sitioweb\administrador\clientes.php(17): DB->fetchAll('\r\n    SELECT uc...', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\config\DB.php on line 162
+[2025-08-16 17:48:17] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:48:17] QUERY: SELECT COUNT(*) as total FROM cascos | Params: []
+[2025-08-16 17:48:17] QUERY: SELECT COUNT(*) as total FROM pedidos | Params: []
+[2025-08-16 17:48:17] QUERY: SELECT COUNT(*) as total FROM pedidos WHERE estado = 'pendiente' | Params: []
+[2025-08-16 17:48:17] ERROR: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'where clause' | SQL: SELECT SUM(total) as total FROM pedidos WHERE DATE(fecha_creacion) = CURDATE() | Params: []
+[16-Aug-2025 17:48:17 America/Mexico_City] PHP Fatal error:  Uncaught Exception: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'where clause' in C:\xampp\htdocs\sitioweb\administrador\config\DB.php:162
+Stack trace:
+#0 C:\xampp\htdocs\sitioweb\administrador\config\DB.php(170): DB->query('SELECT SUM(tota...', Array)
+#1 C:\xampp\htdocs\sitioweb\administrador\dashboard.php(17): DB->fetchOne('SELECT SUM(tota...')
+#2 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\config\DB.php on line 162
+[16-Aug-2025 17:48:42 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[2025-08-16 17:48:55] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:48:55] ERROR: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.usuario_id' in 'on clause' | SQL: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.usuario_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[16-Aug-2025 17:48:55 America/Mexico_City] PHP Fatal error:  Uncaught Exception: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.usuario_id' in 'on clause' in C:\xampp\htdocs\sitioweb\administrador\config\DB.php:162
+Stack trace:
+#0 C:\xampp\htdocs\sitioweb\administrador\config\DB.php(178): DB->query('\r\n    SELECT uc...', Array)
+#1 C:\xampp\htdocs\sitioweb\administrador\clientes.php(17): DB->fetchAll('\r\n    SELECT uc...', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\config\DB.php on line 162
+[16-Aug-2025 17:50:02 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[2025-08-16 17:51:20] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:51:20] QUERY: SELECT COUNT(*) as total FROM cascos | Params: []
+[2025-08-16 17:51:20] QUERY: SELECT COUNT(*) as total FROM pedidos | Params: []
+[2025-08-16 17:51:20] QUERY: SELECT COUNT(*) as total FROM pedidos WHERE estado = 'pendiente' | Params: []
+[2025-08-16 17:51:20] ERROR: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'where clause' | SQL: SELECT SUM(total) as total FROM pedidos WHERE DATE(fecha_creacion) = CURDATE() | Params: []
+[16-Aug-2025 17:51:20 America/Mexico_City] PHP Fatal error:  Uncaught Exception: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'where clause' in C:\xampp\htdocs\sitioweb\administrador\config\DB.php:162
+Stack trace:
+#0 C:\xampp\htdocs\sitioweb\administrador\config\DB.php(170): DB->query('SELECT SUM(tota...', Array)
+#1 C:\xampp\htdocs\sitioweb\administrador\dashboard.php(17): DB->fetchOne('SELECT SUM(tota...')
+#2 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\config\DB.php on line 162
+[16-Aug-2025 17:51:40 America/Mexico_City] PHP Fatal error:  Uncaught Error: Non-static method DB::fetchOne() cannot be called statically in C:\xampp\htdocs\sitioweb\administrador\pedidos.php:39
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 39
+[2025-08-16 17:51:52] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 17:51:52] ERROR: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.usuario_id' in 'on clause' | SQL: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.usuario_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[16-Aug-2025 17:51:52 America/Mexico_City] PHP Fatal error:  Uncaught Exception: Error en consulta: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.usuario_id' in 'on clause' in C:\xampp\htdocs\sitioweb\administrador\config\DB.php:162
+Stack trace:
+#0 C:\xampp\htdocs\sitioweb\administrador\config\DB.php(178): DB->query('\r\n    SELECT uc...', Array)
+#1 C:\xampp\htdocs\sitioweb\administrador\clientes.php(17): DB->fetchAll('\r\n    SELECT uc...', Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\sitioweb\administrador\config\DB.php on line 162
+[2025-08-16 18:03:39] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:03:39] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id, uc.nombre, uc.apellido, uc.email, uc.telefono, uc.fecha_registro, uc.activo
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:03:39] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:04:19] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:19] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id, uc.nombre, uc.apellido, uc.email, uc.telefono, uc.fecha_registro, uc.activo
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:04:19] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:04:21] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:21] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id, uc.nombre, uc.apellido, uc.email, uc.telefono, uc.fecha_registro, uc.activo
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:04:21] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:04:23] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:23] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id, uc.nombre, uc.apellido, uc.email, uc.telefono, uc.fecha_registro, uc.activo
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:04:23] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:04:30] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:30] QUERY: SELECT COUNT(*) as total FROM pedidos p 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+               | Params: []
+[2025-08-16 18:04:30] QUERY: SELECT p.*, uc.nombre, uc.apellido, uc.email 
+        FROM pedidos p 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+         
+        ORDER BY p.fecha_pedido DESC 
+        LIMIT ? OFFSET ? | Params: [10,0]
+[2025-08-16 18:04:30] QUERY: SELECT 
+                COUNT(*) as total_pedidos,
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
+              FROM pedidos | Params: []
+[16-Aug-2025 18:04:30 America/Mexico_City] PHP Warning:  Undefined array key "pagados" in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 162
+[2025-08-16 18:04:39] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:39] QUERY: SELECT COUNT(*) as total FROM pedidos p 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+               | Params: []
+[2025-08-16 18:04:39] QUERY: SELECT p.*, uc.nombre, uc.apellido, uc.email 
+        FROM pedidos p 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+         
+        ORDER BY p.fecha_pedido DESC 
+        LIMIT ? OFFSET ? | Params: [10,0]
+[2025-08-16 18:04:39] QUERY: SELECT 
+                COUNT(*) as total_pedidos,
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
+              FROM pedidos | Params: []
+[16-Aug-2025 18:04:39 America/Mexico_City] PHP Warning:  Undefined array key "pagados" in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 162
+[2025-08-16 18:04:43] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:43] QUERY: SELECT COUNT(*) as total FROM pedidos p 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+               | Params: []
+[2025-08-16 18:04:43] QUERY: SELECT p.*, uc.nombre, uc.apellido, uc.email 
+        FROM pedidos p 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+         
+        ORDER BY p.fecha_pedido DESC 
+        LIMIT ? OFFSET ? | Params: [10,0]
+[2025-08-16 18:04:43] QUERY: SELECT 
+                COUNT(*) as total_pedidos,
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
+              FROM pedidos | Params: []
+[16-Aug-2025 18:04:43 America/Mexico_City] PHP Warning:  Undefined array key "pagados" in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 162
+[2025-08-16 18:04:46] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:46] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:04:46] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:04:48] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:48] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id, uc.nombre, uc.apellido, uc.email, uc.telefono, uc.fecha_registro, uc.activo
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:04:48] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:04:54] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:54] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:04:54] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:04:59] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:04:59] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:04:59] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:05:00] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:05:00] QUERY: SELECT COUNT(*) as total FROM pedidos p 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+               | Params: []
+[2025-08-16 18:05:00] QUERY: SELECT p.*, uc.nombre, uc.apellido, uc.email 
+        FROM pedidos p 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+         
+        ORDER BY p.fecha_pedido DESC 
+        LIMIT ? OFFSET ? | Params: [10,0]
+[2025-08-16 18:05:00] QUERY: SELECT 
+                COUNT(*) as total_pedidos,
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
+              FROM pedidos | Params: []
+[16-Aug-2025 18:05:00 America/Mexico_City] PHP Warning:  Undefined array key "pagados" in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 162
+[2025-08-16 18:05:05] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:05:05] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id, uc.nombre, uc.apellido, uc.email, uc.telefono, uc.fecha_registro, uc.activo
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:05:05] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:05:14] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:05:14] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:05:14] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:05:33] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:05:33] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:05:33] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:05:34] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:05:35] CONNECTION: Conexión establecida | Params: []
+[16-Aug-2025 18:05:35 America/Mexico_City] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\sitioweb\administrador\config\Validator.php on line 11
+[2025-08-16 18:05:35] QUERY: SELECT * FROM usuarios_admin WHERE usuario = ? AND activo = 1 | Params: ["admin"]
+[2025-08-16 18:05:35] QUERY: UPDATE usuarios_admin SET ultimo_acceso = NOW() WHERE id = ? | Params: [2]
+[2025-08-16 18:05:39] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:05:39] QUERY: 
+    SELECT uc.*, 
+           COUNT(p.id) as total_pedidos,
+           SUM(p.total) as total_gastado
+    FROM usuarios_clientes uc
+    LEFT JOIN pedidos p ON uc.id = p.cliente_id
+    GROUP BY uc.id, uc.nombre, uc.apellido, uc.email, uc.telefono, uc.fecha_registro, uc.activo
+    ORDER BY uc.fecha_registro DESC
+    LIMIT ? OFFSET ?
+ | Params: [15,0]
+[2025-08-16 18:05:39] QUERY: SELECT COUNT(*) as total FROM usuarios_clientes | Params: []
+[2025-08-16 18:06:01] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:06:01] QUERY: SELECT COUNT(*) as total FROM pedidos p 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+               | Params: []
+[2025-08-16 18:06:01] QUERY: SELECT p.*, uc.nombre, uc.apellido, uc.email 
+        FROM pedidos p 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+         
+        ORDER BY p.fecha_pedido DESC 
+        LIMIT ? OFFSET ? | Params: [10,0]
+[2025-08-16 18:06:01] QUERY: SELECT 
+                COUNT(*) as total_pedidos,
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
+              FROM pedidos | Params: []
+[16-Aug-2025 18:06:01 America/Mexico_City] PHP Warning:  Undefined array key "pagados" in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 162
+[2025-08-16 18:11:10] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:11:10] QUERY: SELECT COUNT(*) as total FROM pedidos p 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+               | Params: []
+[2025-08-16 18:11:10] QUERY: SELECT p.*, uc.nombre, uc.apellido, uc.email 
+        FROM pedidos p 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+         
+        ORDER BY p.fecha_pedido DESC 
+        LIMIT ? OFFSET ? | Params: [10,0]
+[2025-08-16 18:11:10] QUERY: SELECT 
+                COUNT(*) as total_pedidos,
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
+              FROM pedidos | Params: []
+[16-Aug-2025 18:11:10 America/Mexico_City] PHP Warning:  Undefined array key "pagados" in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 162
+[2025-08-16 18:11:10] CONNECTION: Conexión establecida | Params: []
+[2025-08-16 18:11:10] QUERY: SELECT COUNT(*) as total FROM pedidos p 
+              LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+               | Params: []
+[2025-08-16 18:11:10] QUERY: SELECT p.*, uc.nombre, uc.apellido, uc.email 
+        FROM pedidos p 
+        LEFT JOIN usuarios_clientes uc ON p.cliente_id = uc.id 
+         
+        ORDER BY p.fecha_pedido DESC 
+        LIMIT ? OFFSET ? | Params: [10,0]
+[2025-08-16 18:11:10] QUERY: SELECT 
+                COUNT(*) as total_pedidos,
+                SUM(CASE WHEN estado = 'pendiente' THEN 1 ELSE 0 END) as pendientes,
+                SUM(CASE WHEN estado = 'confirmado' THEN 1 ELSE 0 END) as confirmados,
+                SUM(CASE WHEN estado = 'enviado' THEN 1 ELSE 0 END) as enviados,
+                SUM(CASE WHEN estado = 'entregado' THEN 1 ELSE 0 END) as entregados
+              FROM pedidos | Params: []
+[16-Aug-2025 18:11:10 America/Mexico_City] PHP Warning:  Undefined array key "pagados" in C:\xampp\htdocs\sitioweb\administrador\pedidos.php on line 162
